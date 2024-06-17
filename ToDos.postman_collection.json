@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "4b334329-86ee-4c5e-8428-2cf3e6b4e9c2",
+		"name": "ToDos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "7902838"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"param3@gmail.com\",\n    \"password\": \"test2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://0.0.0.0:5000/auth/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"param1@gmail.com\",\n    \"password\": \"test2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://0.0.0.0:5000/auth/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Item",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTg3MzM1NzcsImlhdCI6MTcxODY0NzE3Nywic3ViIjoiNjY3MDc5NzFiYTUxNDllZDg2NDQ5MzFlIn0.uHOthlmlzlehF-yFk3K4xmwU_gDL_e3k8J_By5ZwZsc"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"todo1\",\n    \"description\": \"This is a description for TODO1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://0.0.0.0:5000/items"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Item",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTg3MzM1NzcsImlhdCI6MTcxODY0NzE3Nywic3ViIjoiNjY3MDc5NzFiYTUxNDllZDg2NDQ5MzFlIn0.uHOthlmlzlehF-yFk3K4xmwU_gDL_e3k8J_By5ZwZsc"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MTg3NDk5OTUsImlhdCI6MTcxODY2MzU5NSwic3ViIjoiNjY3MDZhMTlhMTE2ODFiYjU5MWNjMWVmIn0.MvERscr8QizkZUaWv7JRNDfkRARTaiOOoY7ju6WCAPQ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": "http://0.0.0.0:5000/items"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Item",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTg3MzM1NzcsImlhdCI6MTcxODY0NzE3Nywic3ViIjoiNjY3MDc5NzFiYTUxNDllZDg2NDQ5MzFlIn0.uHOthlmlzlehF-yFk3K4xmwU_gDL_e3k8J_By5ZwZsc"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"test_updated_1\",\n    \"description\": \"description_updated_1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://0.0.0.0:5000/items/667062357aac10623cc2da19"
+			},
+			"response": []
+		},
+		{
+			"name": "Get by ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTg3MzM1NzcsImlhdCI6MTcxODY0NzE3Nywic3ViIjoiNjY3MDc5NzFiYTUxNDllZDg2NDQ5MzFlIn0.uHOthlmlzlehF-yFk3K4xmwU_gDL_e3k8J_By5ZwZsc"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://0.0.0.0:5000/items/667062357aac10623cc2da19"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete by ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTg3MzM1NzcsImlhdCI6MTcxODY0NzE3Nywic3ViIjoiNjY3MDc5NzFiYTUxNDllZDg2NDQ5MzFlIn0.uHOthlmlzlehF-yFk3K4xmwU_gDL_e3k8J_By5ZwZsc"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "http://0.0.0.0:5000/items/667062357aac10623cc2da19"
+			},
+			"response": []
+		}
+	]
+}

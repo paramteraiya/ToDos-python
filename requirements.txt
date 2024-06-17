@@ -1,0 +1,6 @@
+Flask 
+pymongo
+pydantic
+python-dotenv
+PyJWT
+Werkzeug
